@@ -8,6 +8,21 @@ import layout1 from "../assets/images/04-layout1.png";
 import layout2 from "../assets/images/04-layout2.png";
 import layout3 from "../assets/images/04-layout3.png";
 import layout4 from "../assets/images/04-layout4.png";
+const schemamarkup = {
+  "@context": "https://schema.org/",
+  "@type": "HowTo",
+  name: "Overvej hvordan farverne passer sammen",
+  description: "Overvej hvilket udtryk du gerne vil udtrykke med din plakatvæg.",
+  image: "https://schemaovelser.netlify.app/_astro/01-farver.cOXBIyep_Z2jfXvh.webp",
+  totalTime: "PT7M",
+  step: {
+    "@type": "HowToStep",
+    text: "Fire gode steps til at sammensætte en plakatvæg",
+    image: "https://schemaovelser.netlify.app/_astro/01-farver.cOXBIyep_Z2jfXvh.webp",
+    name: "farver",
+    url: "https://schemaovelser.netlify.app/",
+  },
+};
 ---
 
 <MainLayout title="Fire gode steps til at sammensætte en plakatvæg" description="Overvej hvilket udtryk du gerne vil udtrykke med din plakatvæg." ogtitle="Fire gode steps til at sammensætte en plakatvæg" ogdescription="Overvej hvilket udtryk du gerne vil udtrykke med din plakatvæg.">
@@ -73,20 +88,4 @@ import layout4 from "../assets/images/04-layout4.png";
     <hr />
   </article>
 </MainLayout>
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "HowTo",
-    "name": "Overvej hvordan farverne passer sammen",
-    "description": "Overvej hvilket udtryk du gerne vil udtrykke med din plakatvæg.",
-    "image": "https://schemaovelser.netlify.app/_astro/01-farver.cOXBIyep_Z2jfXvh.webp",
-    "totalTime": "PT7M",
-    "step": {
-      "@type": "HowToStep",
-      "text": "Fire gode steps til at sammensætte en plakatvæg",
-      "image": "https://schemaovelser.netlify.app/_astro/01-farver.cOXBIyep_Z2jfXvh.webp",
-      "name": "farver",
-      "url": "https://schemaovelser.netlify.app/"
-    }
-  }
-</script>
+<script type="application/ld+json set:html{JSON.stringify(schemamarkup)}"></script>
